@@ -1,4 +1,4 @@
-#SDL-Theremin
+# SDL-Theremin
 
 (c) Thomas Haschka 2021
 
