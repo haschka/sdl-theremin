@@ -107,7 +107,7 @@ int main(int argc, char** argv) {
   audio_spec.freq = 44100;
   audio_spec.format = AUDIO_S16SYS;
   audio_spec.channels = 1;
-  audio_spec.samples = 1024;
+  audio_spec.samples = 128;
   audio_spec.callback = sound_callback;
   audio_spec.userdata = audio_buffer;
 
