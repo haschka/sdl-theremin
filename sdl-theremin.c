@@ -24,7 +24,9 @@ void sound_callback(void *userdata, Uint8 *stream, int len) {
   for (i = 0; i < len/2; i++) {
       x += .010f;
       sequence[i] = sin(x*current_frequency) * current_gain;
-      if(x*current_frequency > M_PI) x = 0;
+      sequence[i] += 0.5*sin(x*current_frequency+2.)* current_gain;
+      sequence[i] += 0.25*sin(x*current_frequency+2.5)* current_gain;
+      if(x*current_frequency > 2*M_PI) x = 0;
   }
 
   memcpy(stream,sequence,len);
